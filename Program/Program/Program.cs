@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Program.Entities;
+using System;
+using Program.Entities.Enums;
 
 namespace Program
 {
@@ -6,10 +8,22 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Bom dia!");
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
 
-            Console.ReadLine();
+            Console.WriteLine(order);
+
+            string txt = OrderStatus.Delivered.ToString();
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+            Console.WriteLine(os);
+            Console.WriteLine(txt);
+
+
         }
     }
 }
