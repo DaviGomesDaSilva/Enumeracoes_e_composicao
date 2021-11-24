@@ -17,8 +17,8 @@ namespace Program
 
             Console.WriteLine(order);
 
-            string txt = OrderStatus.Delivered.ToString();
-            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+            string txt = OrderStatus.Delivered.ToString(); //Convertendo tipo Enum para string
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered"); //Convertendo string para tipo Enum
 
             Console.WriteLine(os);
             Console.WriteLine(txt);
