@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Program.Entities.Enums;
 
 namespace Program.Entities
@@ -15,7 +17,7 @@ namespace Program.Entities
                 + ", "
                 + Moment
                 + ", "
-                + Status; 
+                + Status;
         }
     }
 }

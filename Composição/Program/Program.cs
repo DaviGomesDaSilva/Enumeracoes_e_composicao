@@ -1,5 +1,5 @@
-﻿using Program.Entities;
-using System;
+﻿using System;
+using Program.Entities;
 using Program.Entities.Enums;
 
 namespace Program
@@ -12,16 +12,17 @@ namespace Program
             {
                 Id = 1080,
                 Moment = DateTime.Now,
-                Status = OrderStatus.PendingPayment
+                Status = OrderStatus.PendingPayments
             };
 
             Console.WriteLine(order);
 
-            string txt = OrderStatus.Delivered.ToString(); //Convertendo tipo Enum para string
-            OrderStatus os = Enum.Parse<OrderStatus>("Delivered"); //Convertendo string para tipo Enum
+            string txt = OrderStatus.PendingPayments.ToString(); // Convertendo Enum p/ string
 
-            Console.WriteLine(os);
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered"); // Convertendo string para Enum
+
             Console.WriteLine(txt);
+            Console.WriteLine(os);
 
 
         }
